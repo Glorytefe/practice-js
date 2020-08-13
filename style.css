@@ -1,0 +1,33 @@
+section{
+    background-color: rosybrown;
+    width: 100%;
+    top: 50%;
+    left: 40%;
+    /* transform: translate(50%); */
+ 
+}
+ul {
+    list-style: none;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+li{
+    border: 1px solid #000;
+    text-align: left;
+    padding: 15px;
+}
+
+button {
+    float: right;
+
+    /* padding: 5px; */
+}
+
+@media screen and (max-width:1000px){
+    ul{
+        max-width: 100%;
+    }
+}
+
+

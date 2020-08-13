@@ -1,0 +1,118 @@
+// object prototype
+var mother = {
+    a: 1,
+    b: 2,  
+};
+
+// creating prototype of mother
+// var daughter = Object.create(mother);
+// daughter.b +=2;
+
+// console.log(mother);
+// console.log(daughter);
+
+// global
+// var names = ['zero', 'one', 'two', 'three', 'four', 'five'];
+// var digit = function (n) {
+//     return names[n];
+// };
+
+// alert(digit(0));
+
+// slow
+
+// var digit = function (n){
+//     var names =  ['zero', 'one', 'two', 'three', 'four', 'five'];
+//     return names [n];
+// }
+// alert(digit(1));
+
+// closure
+
+// var digit = (function (){
+//     var names =  ['zero', 'one', 'two', 'three', 'four', 'five'];
+//     return function (n) {
+//         return names [n];
+//     };
+// })();
+
+
+
+
+
+
+
+
+// add item
+const form = document.getElementById('form-add')
+const formone = document.getElementById('forms')
+const ul = document.getElementById('ul-item');
+const submission = document.getElementById('submit');
+const search = document.getElementById('itsearch')
+
+
+
+form.addEventListener('submit', add);
+function add(e) {
+    e.preventDefault();
+    const addItem = document.getElementById('add').value;
+    console.log(addItem);
+
+     // create li element
+     const li = document.createElement('li');
+   
+    // give class name same as others
+    li.className = 'itemlist';
+    // append to li
+    li.appendChild(document.createTextNode(addItem));
+    
+    // create delete button;  repeat above process for button
+    let button = document.createElement('button');
+
+    button.className = 'btn btn-danger';
+
+    // append button to ul
+    button.appendChild(document.createTextNode('delete'));
+    li.appendChild(button);
+
+    // append li to ul
+    ul.appendChild(li);
+
+}
+
+// delete item
+ul.addEventListener('click', deleted);
+
+function deleted(e){
+if (e.target.classList.contains('btn-danger')){
+    if (confirm('Are you sure?')){
+        let lis = e.target.parentElement;
+        ul.removeChild(lis);
+    }
+}
+
+}
+
+
+// filter item
+search.addEventListener('keyup', filter);
+
+function filter(e){
+e.preventDefault();
+let searchs = e.target.value.toLowerCase();
+
+// get lis
+
+let list = ul.getElementsByTagName('li');
+
+// convert to array
+Array.from(list).forEach(function (item){
+    let filterIt = item.firstChild.textContent.toLowerCase();
+
+    if (filterIt.indexOf(searchs) != -1){
+        item.style.display = 'block';
+    }else {
+        item.style.display = 'none'
+    }
+})
+}
