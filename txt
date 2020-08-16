@@ -1,0 +1,20 @@
+
+    upload.addEventListener('click', progress)
+    function progress(e){
+        if(e.target.classList.contains('ups')){
+            let id = setInterval(timeframe, 50);
+            let width = 1;
+            function timeframe(){
+                if(width >= 100){
+                    // clearInterval(id);
+                }else{
+                    width++;
+                    bar.style.width = width + "%";
+                    bar.style.height = '100%';
+                    status.innerHTML = width + "%";
+                }
+            }
+            // e.target.classList.remove('ups')
+        } 
+    
+}
