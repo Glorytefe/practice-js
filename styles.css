@@ -1,0 +1,179 @@
+*{
+    margin-bottom: 0!important;
+}
+body{
+    margin: 0;
+}
+section{
+    background-color: rgba(173, 172, 170, 0.904);
+    
+}
+.navbar-toggler-icon{
+    background-color: rgb(199, 195, 195)!important;
+}
+header, footer{
+    background-color: rgb(27, 26, 26);
+   
+ 
+}
+
+.second{
+    background-color: rgba(224, 217, 202, 0.87);
+    padding: 0!important;
+    /* padding: 0 ; */
+}
+.second img, .popular img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0!important;
+}
+
+.nav-item .nav-link, .navbar-brand{
+    color: white!important;
+}
+.btn, input{
+    border-radius: 0!important;
+}
+
+.cat {
+    margin: 0.3rem;
+}
+/* .aside{
+    margin: 0;
+} */
+
+.secs, .img-categories{
+    padding: 1rem;
+}
+.rows{
+    padding: 1rem 0;
+    background-color: rgba(214, 211, 206, 0.877);
+}
+aside {
+    width: 100%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none!important;
+}
+.labels li a, footer{
+    color: rgb(199, 188, 188);
+}
+
+.pxs{
+    padding:0 4rem!important;
+}
+
+.calen{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: white;
+    background-color: rgb(70, 63, 63);
+    padding: 0.5rem;
+}
+
+.caleen{
+    font-size: 0.6rem;
+    font-weight: bolder;
+    padding-top: 0.2rem;
+    color: white;
+    width: 60%;
+    background-color: rgb(70, 63, 63);
+}
+h5{
+    margin: 0!important;
+}
+.fa{
+    padding:0 0.5rem;
+}
+.abs{
+    /* position: absolute; 
+    top: 10%; */
+    /* color: white;
+    padding: 1rem;*/
+}
+.first{
+    background-color:  rgba(214, 211, 206, 0.877)!important;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 1rem;
+    /* margin-top: -15%;
+    position: absolute; */
+}
+.grids{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.gr1{
+    padding: 1rem 0;
+}
+.gr1 .read-more{
+    margin-left: 10px;
+}
+
+.btn{
+    background-color: rgb(32, 31, 31)!important;
+    
+}
+.categories, .categories-new, .popular, .gr1 p{
+    padding: 0 1rem;
+}
+.carousel-item img{
+    margin: 0 auto;
+    width: 50%;
+
+}
+.carousel-inner {
+    color: black;
+    /* background-color: black; */
+    /* padding-bottom: 2rem; */
+}
+@media screen and (max-width:1024px){
+    .carousel-item img{
+        width: 100%;
+    }
+    p{
+        font-size: 18px;
+    }
+    .grids{
+        display: block;
+    }
+    .pxs{
+        padding: 0 1rem!important;
+    }
+    aside{
+        padding: 0;
+        width: 100%!important;
+    }
+    .first{
+        top: 5%;
+        grid-template-columns: 1fr 2fr;
+        left: 5%;
+    }
+    .first h3{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    /* .popular .rounded-circle{
+        width: 25%!important;
+      margin: 0 auto;
+    } */
+    .calen{
+        font-size: 0.6rem;
+        font-weight: bolder;
+        padding-top: 0.2rem;
+    }
+    .popular .caleen{
+        width: 70%;
+    }
+    .btn {
+        font-size: 0.9rem!important;
+    }
+}
