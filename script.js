@@ -1,9 +1,9 @@
-const client = contentful.createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
-  space: "dm2zhs7qdtugd",
-  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-  accessToken: "DcMw94YMDEimoSUiD1CmiCD-Hsmz7RpKiJrvQXGKrQ0",
-});
+// const client = contentful.createClient({
+//   // This is the space ID. A space is like a project folder in Contentful terms
+//   space: "dm2zhs7qdtugd",
+//   // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+//   accessToken: "DcMw94YMDEimoSUiD1CmiCD-Hsmz7RpKiJrvQXGKrQ0",
+// });
 // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
 
 // variables
@@ -17,7 +17,25 @@ const cartItems = document.querySelector(".cartitems ");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productDOM = document.querySelector(".products-center");
+const accDOM = document.querySelectorAll(".acckrd-header");
 
+accDOM.forEach((acc) => {
+  acc.addEventListener("click", () => {
+    let accordAct = document.querySelector(".acckrd-header.active");
+    if (accordAct && accordAct !== acc) {
+      accordAct.classList.toggle("active");
+      accordAct.nextElementSibling.style.maxHeight = 0;
+    }
+
+    acc.classList.toggle("active");
+    const accordBody = acc.nextElementSibling;
+    if (acc.classList.contains("active")) {
+      accordBody.style.maxHeight = accordBody.scrollHeight + "px";
+    } else {
+      accordBody.style.maxHeight = 0;
+    }
+  });
+});
 // cart
 let cart = [];
 
